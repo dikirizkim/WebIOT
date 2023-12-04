@@ -193,7 +193,6 @@ footer {
     color: rgb(255, 255, 255);
     padding: 20px 0;
     text-align: center;
-    font-size: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -240,5 +239,6 @@ footer {
     }
     footer {
         padding: 20px 10px;
+        font-size: 15px;
     }
 }
