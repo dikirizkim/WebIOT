@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // fungsi buat fetch temperature dari api thinkspeak
 
 function fetchTemperature() {
-  fetch("https://api.thingspeak.com/channels/2367232/feeds.json?api_key=8WFLXWQI4SC2FR27&results=2")
+  fetch("https://api.thingspeak.com/channels/2368152/feeds.json?api_key=PXOSLGK8AX6ZQ2PV&results=2")
       .then(response => response.json())
       .then(data => {
           const feeds = data.feeds;
@@ -24,7 +24,7 @@ function fetchTemperature() {
 
 // fungsi buat fetch motion dari api thinkspeak
 function fetchPeopleCount() {
-  fetch("https://api.thingspeak.com/channels/2367232/feeds.json?api_key=8WFLXWQI4SC2FR27&results=2")
+  fetch("https://api.thingspeak.com/channels/2368152/feeds.json?api_key=PXOSLGK8AX6ZQ2PV&results=2")
       .then(response => response.json())
       .then(data => {
           const feeds = data.feeds;
