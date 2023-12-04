@@ -34,4 +34,3 @@ function fetchPeopleCount() {
       .catch(error => console.error("Error fetching people count:", error));
 }
 
-// end fungsi buat fetch motion dari api thinkspeak
