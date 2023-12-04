@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, h4, h5, strong {
+    color: black; 
+}
+
+p, label, input, textarea, li {
+    color: dimgrey;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1200px; /* Added max-width to limit container width on larger screens */
+    margin: 0 auto;
+    padding: 0 20px; /* Add padding to the main container for better spacing on smaller screens */
+    box-sizing: border-box; 
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* titles */
+.member-title, .portfolio-title {
+    margin: 1rem 0 4rem;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: grey; /* Assuming grey is a custom variable or use a color value */
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: grey; /* Assuming grey is a custom variable or use a color value */
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+/* layout */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+/* logo and navigation menu */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.logo a, nav ul li a {
+    color: black;
+}
+
+/* Hero Section */
+#hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 5rem;
+    font-weight: 800;
+    margin: 0.5rem 0 1rem;
+}
+
+.hero-right img {
+    width: 80%;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+/* member section */
+#member {
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.member .pre-title {
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.member-cover img {
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* portfolio section */
+#portfolio {
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.portfolio .pre-title {
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.portfolio .member-cover img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.card {
+    background-color: #ffd7d7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto; /* Set auto margin to center horizontally */
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: transform 0.3s ease-in-out;
+    display: flex; /* Add display: flex; */
+    flex-direction: column; /* Add flex-direction: column; to stack children vertically */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+footer {
+    background-color: #ffd7d7;
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* script buat responsive mobile jangan dihapus */
+@media screen and (max-width: 768px) {
+    .main-container {
+        width: 90%;
+    }
+
+    /* Adjustments for smaller screens */
+    .nav ul {
+        gap: 5rem;
+    }
+
+    .hero-name {
+        font-size: 3rem;
+    }
+
+    #hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        height: auto;
+    }
+
+    .hero-right img {
+        width: 100%;
+    }
+
+    .member-cover img,
+    .portfolio .member-cover img {
+        width: 80%;
+        height: auto;
+    }
+
+    .grid-4 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .card {
+        width: calc(100% - 40px);
+    }
+    footer {
+        padding: 20px 10px;
+    }
+}
